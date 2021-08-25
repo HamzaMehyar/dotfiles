@@ -113,8 +113,6 @@ source $(brew --prefix nvm)/nvm.sh
 export PATH="$HOME/.redis/src:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
-# export PATH=/Users/jawaker/Downloads/apache-cassandra-3.11.11/bin/:$PATH
 export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
-if [ -e /Users/jawaker/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/jawaker/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 export PATH="$HOME/.elasticsearch/bin:$PATH"
-alias config='/usr/bin/git --git-dir=/Users/jawaker/.dotfiles/ --work-tree=/Users/jawaker'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/Users/jawaker'

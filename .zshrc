@@ -115,4 +115,4 @@ export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

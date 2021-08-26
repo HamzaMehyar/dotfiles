@@ -116,3 +116,10 @@ export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gog='google'
+alias n="nvim"
+alias v="nvim"
+alias vim="nvim"
+get(){
+  git grep "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
+}

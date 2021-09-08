@@ -115,11 +115,12 @@ export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
+alias ayoub="$HOME/.oh-my-zsh/ayoub/ayoub"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gog='google'
 alias n="nvim"
 alias v="nvim"
 alias vim="nvim"
 get(){
-  git grep "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
+  git grep -B"${2:-0}" -A"${3:-0}" -i "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
 }

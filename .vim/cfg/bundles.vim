@@ -50,6 +50,7 @@ call vundle#begin()
   Plugin 'Chiel92/vim-autoformat'      " Format on save
   Plugin 'OmniSharp/omnisharp-vim'
   Plugin 'SirVer/ultisnips'
+  " Plugin 'vim-syntastic/syntastic'
 
   " =====================================================================
   "                          AutoComplete and snippits
@@ -65,17 +66,18 @@ call vundle#begin()
   "                          Clojure
   " =====================================================================
 
-  "Plugin 'guns/vim-clojure-static.git'
-  "Plugin 'guns/vim-clojure-highlight.git'
-  "Plugin 'tpope/vim-leiningen.git'
-  "Plugin 'tpope/vim-dispatch.git'
-  "Plugin 'tpope/vim-salve.git'
-  "Plugin 'tpope/vim-sexp-mappings-for-regular-people'
-  "Plugin 'guns/vim-sexp'
-  "Plugin 'guns/vim-slamhound'
-  "Plugin 'dgrnbrg/redl'
-  "Plugin 'venantius/vim-cljfmt' "clojure format tool
-  "Plugin 'tpope/vim-fireplace.git'
+  Plugin 'guns/vim-clojure-static.git'
+  Plugin 'guns/vim-clojure-highlight.git'
+  Plugin 'tpope/vim-leiningen.git'
+  " Plugin 'venantius/vim-eastwood' "clojure linting
+  Plugin 'tpope/vim-dispatch.git'
+  Plugin 'tpope/vim-salve.git'
+  Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+  Plugin 'guns/vim-sexp'
+  Plugin 'guns/vim-slamhound'
+  Plugin 'dgrnbrg/redl'
+  Plugin 'venantius/vim-cljfmt' "clojure format tool
+  Plugin 'tpope/vim-fireplace.git'
 
   " =====================================================================
   "                          Pairs & Comments

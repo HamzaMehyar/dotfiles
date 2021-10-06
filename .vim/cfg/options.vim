@@ -33,7 +33,19 @@ let g:ale_cpp_gcc_options = ' -std=c++17 -Wno-unused -i system /usr/include/c++/
 "  au BufWrite * :Autoformat "AutoFormats on save
 
 
-
+" =====================================================================
+"                         Syntastic
+" =====================================================================
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_warning_symbol = '!'
+" let g:syntastic_error_symbol = '✘'
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+" let g:syntastic_clojure_checkers = ['eastwood']
 " =====================================================================
 "                         Airline
 " =====================================================================
@@ -46,10 +58,10 @@ let g:airline#extensions#tabline#enabled = 1
 " =====================================================================
 "                         Clojure Format CLJFMT
 " =====================================================================
-
+autocmd User FireplacePreConnect call fireplace#register_port_file(expand('~/.lein/repl-port'), '/tmp')
 let g:clj_fmt_autosave = 1
-"let g:clj_fmt_config = '{:indentation? true, :remove-surrounding-whitespace? false, :remove-trailing-whitespace? true, :remove-consecutive-blank-lines? true, :insert-missing-whitespace? true, :align-associative? true}' ", :indents {#"^\w" [[:inner 0]], #".*" [[:inner 0]]}
-"
+let g:clj_fmt_config = '{:indentation? true, :remove-surrounding-whitespace? false, :remove-trailing-whitespace? true, :remove-consecutive-blank-lines? true, :insert-missing-whitespace? true, :align-associative? true}' ", :indents {#"^\w" [[:inner 0]], #".*" [[:inner 0]]}
+
 
 
 "======================================================================

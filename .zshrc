@@ -122,9 +122,11 @@ alias gog='google'
 alias n="nvim"
 alias v="nvim"
 alias vim="nvim"
+alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
+alias 5awa="sudo"
 get(){
   git grep -B"${2:-0}" -A"${3:-0}" -i "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
 }
 gdiff(){
-  git diff ${1} -- . ':(exclude)/Users/jawaker/workspace/jawaker/web/db/structure.sql' ':(exclude)/Users/jawaker/workspace/jawaker/web/Gemfile.lock'
+  git diff ${1} -- . ':(exclude)/Users/jawaker/workspace/jawaker/web/db/structure.sql' ':(exclude)/Users/jawaker/workspace/jawaker/web/Gemfile.lock' ':(exclude)/Users/jawaker/workspace/jawaker/jawaker.sh'
 }

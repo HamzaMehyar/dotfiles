@@ -56,11 +56,16 @@ call vundle#begin()
   "                          AutoComplete and snippits
   " =====================================================================
 
-  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
-  Plugin 'https://gitlab.com/mixedCase/deoplete-omnisharp.git'
+  " Plugin 'https://gitlab.com/mixedCase/deoplete-omnisharp.git'
+  " Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
+
   Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
   Plugin 'ervandew/supertab'                                          " tab to cycle autocomplete
   Plugin 'honza/vim-snippets'                                         " Snippets are separated from the engine
+  " =====================================================================
+  "                          Ruby
+  " =====================================================================
+  Plugin 'vim-ruby/vim-ruby'
 
   " =====================================================================
   "                          Clojure
@@ -69,13 +74,13 @@ call vundle#begin()
   Plugin 'guns/vim-clojure-static.git'
   Plugin 'guns/vim-clojure-highlight.git'
   Plugin 'tpope/vim-leiningen.git'
-  " Plugin 'venantius/vim-eastwood' "clojure linting
   Plugin 'tpope/vim-dispatch.git'
   Plugin 'tpope/vim-salve.git'
   Plugin 'tpope/vim-sexp-mappings-for-regular-people'
   Plugin 'guns/vim-sexp'
   Plugin 'guns/vim-slamhound'
   Plugin 'dgrnbrg/redl'
+  " Plugin 'venantius/vim-eastwood' "clojure linting
   Plugin 'venantius/vim-cljfmt' "clojure format tool
   Plugin 'tpope/vim-fireplace.git'
 

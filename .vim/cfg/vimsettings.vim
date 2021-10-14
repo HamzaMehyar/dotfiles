@@ -88,7 +88,7 @@ set splitright                                               " Split panes to ri
 set foldmethod=indent                                        " Folding performance
 set foldlevelstart=999                                       " Only auto-fold if file > 999 levels
 " set tags=tags                                                " Look for the ctags in the project directory.
-set statusline=%<%f\ %h%m%r%=\ %-14.(%l,%c%V%)\ %P%#warningmsg#%{SyntasticStatuslineFlag()}%*
+" set statusline=%<%f\ %h%m%r%=\ %-14.(%l,%c%V%)\ %P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
 
 

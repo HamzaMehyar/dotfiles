@@ -107,7 +107,6 @@ export VISUAL='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim =nvim
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 export PATH="$HOME/.redis/src:$PATH"
@@ -116,12 +115,17 @@ export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
+alias nbundler="$HOME/.rbenv/versions/3.0.2/bin/bundler"
+alias ngem="$HOME/.rbenv/versions/3.0.2/bin/gem"
+alias nruby="$HOME/.rbenv/versions/3.0.2/bin/ruby"
+alias jruby="$HOME/.rbenv/versions/jruby-9.2.19.0/bin/ruby"
+alias jbundle="$HOME/.rbenv/versions/jruby-9.2.19.0/bin/bundler"
 alias ayoub="$HOME/.oh-my-zsh/ayoub/ayoub"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias gog='google'
 alias n="nvim"
 alias v="nvim"
-alias vim="nvim"
+alias lls="ls"
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 get(){

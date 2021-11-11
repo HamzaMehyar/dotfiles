@@ -16,7 +16,7 @@ map <C-l> <C-w>l
 " Exit insert mode
 imap jj <esc>
 
-" Help with moving between wrapped lines
+"Help with moving between wrapped lines
 nmap j gj
 nmap k gk
 
@@ -59,4 +59,6 @@ command! Q q
 " StripWhitespace
 map ,,, :StripWhitespace<CR>
 
+" Map space for search
+nnoremap <space> /
 filetype on

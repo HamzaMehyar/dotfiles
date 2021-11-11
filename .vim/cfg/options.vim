@@ -103,7 +103,6 @@ let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 " let g:UltiSnipsUsePythonVersion    = 2.7
 
-
 " =====================================================================
 "                          YCM
 " =====================================================================
@@ -120,9 +119,10 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 
 
 " =====================================================================
-"                          End 
+"                          End
 " =====================================================================
 
 
+  nnoremap <space> :NERDTreeToggle<CR>
 filetype on
 

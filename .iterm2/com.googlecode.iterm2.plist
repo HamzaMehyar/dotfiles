@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AllowClipboardAccess</key>
-	<false/>
+	<true/>
 	<key>AllowInteractiveSwipeBetweenTabs</key>
 	<true/>
 	<key>AlternateMouseScroll</key>

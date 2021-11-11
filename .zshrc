@@ -75,6 +75,7 @@ plugins=(git
   zsh-syntax-highlighting
   sudo
   web-search
+  autojump
   k
 )
 
@@ -109,6 +110,7 @@ export VISUAL='nvim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+export HOMEBREW_NO_AUTO_UPDATE=1
 export PATH="$HOME/.redis/src:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
@@ -126,10 +128,11 @@ alias gog='google'
 alias n="nvim"
 alias v="nvim"
 alias lls="ls"
+alias it="git"
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 get(){
-  git grep -B"${2:-0}" -A"${3:-0}" -i "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
+  git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
 }
 gdiff(){
   git diff ${1} -- . ':(exclude)/Users/jawaker/workspace/jawaker/web/db/structure.sql' ':(exclude)/Users/jawaker/workspace/jawaker/web/Gemfile.lock' ':(exclude)/Users/jawaker/workspace/jawaker/jawaker.sh'

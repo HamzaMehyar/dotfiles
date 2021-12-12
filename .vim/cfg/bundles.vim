@@ -62,7 +62,8 @@ call vundle#begin()
   Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
   Plugin 'ervandew/supertab'                                          " tab to cycle autocomplete
   Plugin 'honza/vim-snippets'                                         " Snippets are separated from the engine
-  " =====================================================================
+  Plugin 'shinglyu/vim-codespell' "language spell checker
+  "=====================================================================
   "                          Ruby
   " =====================================================================
   Plugin 'vim-ruby/vim-ruby'

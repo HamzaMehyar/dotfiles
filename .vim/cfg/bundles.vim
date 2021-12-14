@@ -59,7 +59,7 @@ call vundle#begin()
   " Plugin 'https://gitlab.com/mixedCase/deoplete-omnisharp.git'
   " Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
 
-  Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
+  " Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
   Plugin 'ervandew/supertab'                                          " tab to cycle autocomplete
   Plugin 'honza/vim-snippets'                                         " Snippets are separated from the engine
   Plugin 'shinglyu/vim-codespell' "language spell checker

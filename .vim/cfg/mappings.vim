@@ -34,10 +34,14 @@ let g:NERDTreeMapPreview="<F4>"
 "map <Leader>a :call RunAllSpecs()<CR>
 
 " Silver Searcherrrrr
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap \ :Ag<SPACE>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
+inoremap <silent> <PageUp> <Nop>
+inoremap <silent> <PageDown> <Nop>
+nnoremap <silent> <PageUp> <Nop>
+nnoremap <silent> <PageDown> <Nop>
 " tComment
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
@@ -46,7 +50,7 @@ nnoremap <silent> <C-S-Right> <c-w>l
 nnoremap <silent> <C-S-Left> <c-w>h
 nnoremap <silent> <C-S-Up> <c-w>k
 nnoremap <silent> <C-S-Down> <c-w>j
-
+let maplocalleader = " "
 
 "maps upper-case for save quit and update
 :command W update
@@ -54,11 +58,18 @@ nnoremap <silent> <C-S-Down> <c-w>j
 command! Q q
 
 
+"easy mode
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 "noremap <Down>  jzz
 
 " StripWhitespace
 map ,,, :StripWhitespace<CR>
 
+"g to help with numbering increase
+nnoremap g<C-A> :<C-U>s/[01]\+/\=printf('%0'.len(submatch(0)).'s',magnum#Int(submatch(0),2).Add(magnum#Int(v:count1)).String(2))/<CR>
 " Map space for search
-nnoremap <space> /
+" nnoremap <space> /
 filetype on

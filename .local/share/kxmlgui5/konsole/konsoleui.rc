@@ -1,5 +1,5 @@
 <!DOCTYPE kpartgui>
-<kpartgui version="11" name="konsole">
+<kpartgui name="konsole" version="11">
  <MenuBar>
   <Menu name="file">
    <text>File</text>
@@ -60,9 +60,12 @@
   <Action name="focus-view-right" shortcut="Shift+Right"/>
   <Action name="move-tab-to-left" shortcut=""/>
   <Action name="move-tab-to-right" shortcut=""/>
-  <Action name="next-tab" shortcut="Alt+Right; Alt+PgDown"/>
-  <Action name="previous-tab" shortcut="Alt+Left; Alt+PgUp"/>
+  <Action name="next-tab" shortcut="Alt+Right; Alt+L"/>
+  <Action name="previous-tab" shortcut="Alt+Left; Alt+H"/>
   <Action name="split-view-left-right" shortcut="Ctrl+Alt+Right; Ctrl+Alt+Left"/>
   <Action name="split-view-top-bottom" shortcut="Ctrl+Alt+Up; Ctrl+Alt+Down"/>
+  <Action name="last-used-tab" shortcut=""/>
+  <Action name="last-used-tab-reverse" shortcut=""/>
+  <Action name="detach-tab" shortcut=""/>
  </ActionProperties>
 </kpartgui>

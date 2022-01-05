@@ -20,7 +20,7 @@ export NVM_DIR=~/.nvm
 export PATH="$HOME/.redis/src:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
+export PATH="$HOME/.rbenv/versions/3.0.2/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
@@ -44,4 +44,8 @@ alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 get(){
   git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
+}
+
+gdiff(){
+  git diff ${1} -- . ':(exclude)/home/hamza/workspace/jawaker/web/db/structure.sql' ':(exclude)/home/hamza/workspace/jawaker/web/Gemfile.lock' ':(exclude)/home/hamza/workspace/jawaker/jawaker.sh'
 }

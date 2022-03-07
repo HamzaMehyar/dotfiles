@@ -1,0 +1,38 @@
+{
+  "chunkedUserStyleRules0": "LyogU2hvdyB0aXRsZSBvZiB1bnJlYWQgdGFicyB3aXRoIHJlZCBhbmQgaXRhbGljIGZvbnQgKi8KLyoKOnJvb3Quc2lkZWJhciB0YWItaXRlbS51bnJlYWQgLmxhYmVsLWNvbnRlbnQgewogIGNvbG9yOiByZWQgIWltcG9ydGFudDsKICBmb250LXN0eWxlOiBpdGFsaWMgIWltcG9ydGFudDsKfQoqLwoKLyogQWRkIHByaXZhdGUgYnJvd3NpbmcgaW5kaWNhdG9yIHBlciB0YWIgKi8KLyoKOnJvb3Quc2lkZWJhciB0YWItaXRlbS5wcml2YXRlLWJyb3dzaW5nIHRhYi1sYWJlbDpiZWZvcmUgewogIGNvbnRlbnQ6ICLwn5W2IjsKfQoqLw==",
+  "configsVersion": 24,
+  "enableMacOSBehaviors": true,
+  "notifiedFeaturesVersion": 9,
+  "optionsExpandedGroups": [
+    "group-allConfigs"
+  ],
+  "optionsExpandedSections": [
+    "section-appearance",
+    "section-debug"
+  ],
+  "showDialogInSidebar": true,
+  "showExpertOptions": true,
+  "sidebarPosition": 1,
+  "style": "photon",
+  "syncDevices": {
+    "device-1629101968717-36472": {
+      "id": "device-1629101968717-36472",
+      "name": "Firefox on macOS",
+      "icon": "device-desktop",
+      "timestamp": 1639308640857
+    },
+    "device-1639302114851-27645": {
+      "id": "device-1639302114851-27645",
+      "name": "Firefox on Linux",
+      "icon": "device-desktop",
+      "timestamp": 1639308578893
+    }
+  },
+  "undoMultipleTabsClose": false,
+  "useCachedTree": false,
+  "userStyleRules": "",
+  "userStyleRulesFieldHeight": "130px",
+  "warnOnCloseTabs": false,
+  "warnOnCloseTabsByClosebox": false,
+  "workaroundForBug1548949DroppedTabs": ""
+}

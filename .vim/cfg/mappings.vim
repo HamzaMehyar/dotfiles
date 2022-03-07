@@ -21,8 +21,10 @@ nmap j gj
 nmap k gk
 
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+" map <C-n> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>
+
+map <C-n> :Autoformat<CR>
 
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"

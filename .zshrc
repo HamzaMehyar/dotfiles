@@ -20,10 +20,16 @@ export NVM_DIR=~/.nvm
 export PATH="$HOME/.redis/src:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
-export PATH="$HOME/.rbenv/versions/3.0.2/bin/:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
+export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$PATH:/usr/lib/dart/bin"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH="$ANDROID_HOME/tools:$PATH"
+export PATH="$ANDROID_HOME/platform-tools:$PATH"
+export PATH="$ANDROID_HOME/emulator:$PATH"
 
 # alias nbundler="$HOME/.rbenv/versions/3.0.2/bin/bundler"
 # alias ngem="$HOME/.rbenv/versions/3.0.2/bin/gem"
@@ -49,3 +55,7 @@ get(){
 gdiff(){
   git diff ${1} -- . ':(exclude)/home/hamza/workspace/jawaker/web/db/structure.sql' ':(exclude)/home/hamza/workspace/jawaker/web/Gemfile.lock' ':(exclude)/home/hamza/workspace/jawaker/jawaker.sh'
 }
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

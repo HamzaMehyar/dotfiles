@@ -37,7 +37,7 @@ set undofile
 " =====================================================================
 "                           Copy to System Clipboard
 " =====================================================================
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 " =====================================================================
 "                           Appearance & Colour
 " =====================================================================
@@ -63,7 +63,7 @@ hi Search ctermfg=green ctermbg=NONE cterm=underline         " Search results ar
 "                              vim Settings
 " =====================================================================
 
-set clipboard=unnamed,unnamedplus
+" set clipboard=unnamed,unnamedplus
 set shell=/bin/zsh
 set sh=zsh
 set noswapfile                                               " Don't create .swp files

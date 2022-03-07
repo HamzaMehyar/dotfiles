@@ -1,5 +1,5 @@
 if &compatible
-set nocompatible
+  set nocompatible
 end
 
 filetype off
@@ -30,8 +30,8 @@ let g:ale_cpp_gcc_options = ' -std=c++17 -Wno-unused -i system /usr/include/c++/
 " =====================================================================
 "                         AutoFormat
 " =====================================================================
-"  au BufWrite * :Autoformat "AutoFormats on save
-
+" au BufWrite * :Autoformat "AutoFormats on save
+let g:formatters_ruby = ['rubocop']
 
 " =====================================================================
 "                         Syntastic
@@ -112,9 +112,9 @@ let g:deoplete#auto_complete_start_length = 0
 "let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_popup = 1
 let g:OmniSharp_popup_options = {
-  \ 'winblend': 30,
-  \ 'winhl': 'Normal:Normal'
-    \}
+      \ 'winblend': 30,
+      \ 'winhl': 'Normal:Normal'
+      \}
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 
 
@@ -123,6 +123,6 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 " =====================================================================
 
 
-  nnoremap <space> :NERDTreeToggle<CR>
+nnoremap <space> :NERDTreeToggle<CR>
 filetype on
 

@@ -49,7 +49,6 @@ set termguicolors
 set background=dark
 set t_Co=256
 " set term=screen-256color
-
 set cursorline                                               " Highlight current cursor line
 "set cursorcolumn                                             " Highlight current cursor column VERY LAGGY WHEN SCROLLING
 set lazyredraw                                                " makes cursorline less laggy
@@ -136,7 +135,7 @@ endif
 
 
 " =====================================================================
-"                          End 
+"                          End
 " =====================================================================
 
 

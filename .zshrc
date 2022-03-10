@@ -42,6 +42,8 @@ alias vim="nvim"
 alias v="nvim"
 alias lls="ls"
 alias it="git"
+alias :q="exit"
+alias :x="exit"
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 

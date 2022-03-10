@@ -1,5 +1,5 @@
 if &compatible
-set nocompatible
+  set nocompatible
 end
 
 filetype off
@@ -13,8 +13,12 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-w>l
 
+"disable ex mode
+:nnoremap gQ <Nop>
 " Exit insert mode
 imap jj <esc>
+nnoremap q: <nop>
+nnoremap Q <nop>
 
 "Help with moving between wrapped lines
 nmap j gj

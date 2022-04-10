@@ -67,6 +67,7 @@ Plugin 'shinglyu/vim-codespell' "language spell checker
 "                          Ruby
 " =====================================================================
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-utils/vim-ruby-fold'
 
 " =====================================================================
 "                          Clojure

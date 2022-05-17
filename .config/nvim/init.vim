@@ -14,10 +14,6 @@ if filereadable(expand("~/.vim/cfg/bundles.vim"))
   source ~/.vim/cfg/bundles.vim
 endif
 
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
-
 " =====================================================================
 "                            Vim Settings
 " =====================================================================

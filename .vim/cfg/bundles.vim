@@ -15,7 +15,9 @@ Plugin 'gmarik/Vundle.vim'
 "                          Colors And Appearance
 " =====================================================================
 
+" Plugin 'psliwka/vim-smoothie'
 Plugin 'tyrannicaltoucan/vim-quantum'
+Plugin 'APZelos/blamer.nvim'
 Plugin 'vim-airline/vim-airline'               " Nice status bar
 Plugin 'vim-airline/vim-airline-themes'        " Themes for airline
 Plugin 'ryanoasis/vim-devicons'
@@ -26,7 +28,7 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'     " Number toggling
 
 "Plugin 'glepnir/galaxyline.nvim'
 "Plugin 'jtratner/vim-flavored-markdown'        " Highlighting for Markdown snippets
-
+let g:blamer_enabled = 1
 " =====================================================================
 "                          Windows
 " =====================================================================
@@ -38,6 +40,7 @@ Plugin 'simeji/winresizer'
 " =====================================================================
 
 Plugin 'ggreer/the_silver_searcher'     " Silverrrrrrrrrrrrr searcherrr :Ag
+Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'            " File structure tree
 Plugin 'dbakker/vim-projectroot'        " sets project root to git init
 

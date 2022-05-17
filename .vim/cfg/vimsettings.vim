@@ -46,6 +46,7 @@ colorscheme base16-default-dark
 
 set termguicolors
 
+let g:blamer_enabled = 1
 set background=dark
 set t_Co=256
 " set term=screen-256color

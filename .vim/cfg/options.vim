@@ -123,6 +123,6 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips", "UnitySnippets"]
 " =====================================================================
 
 
-nnoremap <space> :NERDTreeToggle<CR>
+" nnoremap <space> :NERDTreeToggle<CR>
 filetype on
 

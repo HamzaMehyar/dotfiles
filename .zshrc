@@ -2,8 +2,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="minimal"
 
-plugins=(git
+plugins=(
+  git
   zsh-autosuggestions
+  zsh-vi-mode
   zsh-syntax-highlighting
   sudo
   web-search
@@ -32,7 +34,6 @@ export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
 export PATH="/home/hamza/.local/bin/:$PATH"
-export PATH="$HOME/.rbenv/versions/2.4.10/bin/:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$PATH:/usr/lib/dart/bin"
 
@@ -54,6 +55,10 @@ alias lls="ls"
 alias it="git"
 alias :q="exit"
 alias :x="exit"
+alias weather="curl wttr.in/Amman"
+
+alias rspec="bundle exec rspec"
+
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

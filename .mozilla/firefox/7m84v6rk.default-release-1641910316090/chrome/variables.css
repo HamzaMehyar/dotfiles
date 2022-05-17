@@ -14,8 +14,8 @@
     --toolbar-non-lwt-textcolor: var(--toolbar-color) !important;
     --toolbar-field-focus-border-color: var(--lwt-toolbar-field-color) !important;
 
-    --toolbar-field-background-color: var(--light-1) !important;
-    --toolbar-field-focus-background-color: var(--light-1) !important;
+    --toolbar-field-background-color: rgb(43, 42, 51) !important;
+    --toolbar-field-focus-background-color: rgb(43, 42, 51) !important;
 }
 
 /* light mode */

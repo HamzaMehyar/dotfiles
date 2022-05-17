@@ -6,7 +6,6 @@
 @import "popup/popup.css";
 @import "interface/interface.css";
 @import "userChrome-tabline.css";
-/* Hide splitter, when using Tree Style Tab. */
 
 :root { --thin-tab-width: 100px; }
 :root { --wide-tab-width: 300px; }

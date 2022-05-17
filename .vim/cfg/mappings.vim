@@ -5,7 +5,7 @@ end
 filetype off
 
 " CtrlP + Ctags
-nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>. :CtrlPCurFile<cr>
 
 " splits movement
 map <C-h> <C-W>h
@@ -23,7 +23,9 @@ nnoremap Q <nop>
 "Help with moving between wrapped lines
 nmap j gj
 nmap k gk
+map <C-s> ct_
 
+" hamza_ram
 " NERDTree
 " map <C-n> :NERDTreeToggle<CR>
 map <F3> :NERDTreeFind<CR>

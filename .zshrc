@@ -56,6 +56,8 @@ alias it="git"
 alias :q="exit"
 alias :x="exit"
 alias weather="curl wttr.in/Amman"
+alias vup="amixer sset 'Master' 5%+"
+alias vd="amixer sset 'Master' 5%-"
 
 alias rspec="bundle exec rspec"
 

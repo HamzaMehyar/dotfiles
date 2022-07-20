@@ -6,6 +6,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always "setxkbmap -model pc104 -layout us,ara -variant ,, -option grp:alt_shift_toggle"
 exec "setxkbmap -layout us,ara"
 exec "setxkbmap -option 'grp:alt_shift_toggle'"
+exec --no-startup-id ~/.picom/build/src/picom -CGb
 
 #--Graphics
 exec "autorandr --change work" # this expect you to have autorandr installed  and saved preset to 'work'
@@ -22,6 +23,9 @@ exec --no-startup-id nm-applet
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+#________________________________Borders_________________________________
+for_window [class="^.*"] border pixel 0
+#_________________________________________________________________________
 
 #_________________________________Keyboard Shortcuts___________________________________
 

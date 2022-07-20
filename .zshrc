@@ -34,7 +34,7 @@ export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
 export PATH="/home/hamza/.local/bin/:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:/usr/lib/dart/bin"
 
 # export ANDROID_HOME=$HOME/Android/Sdk
@@ -52,12 +52,26 @@ alias n="nvim"
 alias vim="nvim"
 alias v="nvim"
 alias lls="ls"
+
+#git
 alias it="git"
+alias gds="git diff --staged"
+alias gdh="git diff HEAD^"
+alias grsp="git restore --staged -p"
+alias grs="git restore --staged"
+alias grsh="git reset --soft HEAD^"
+#git
+
 alias :q="exit"
 alias :x="exit"
 alias weather="curl wttr.in/Amman"
 alias vup="amixer sset 'Master' 5%+"
 alias vd="amixer sset 'Master' 5%-"
+alias task="taskell ~/.config/taskell/taskell.md"
+alias taskill="task"
+alias red="~/workspace/jawaker/redis.sh"
+alias jawaker="~/workspace/jawaker/jawaker.sh"
+alias betterjawaker="~/workspace/jawaker/betterjawaker.sh"
 
 alias rspec="bundle exec rspec"
 
@@ -94,5 +108,5 @@ export NVM_DIR="$HOME/.nvm"
 #     fi
 # fi
 # unset __conda_setup
-# # <<< conda initialize <<<
-
+# <<< conda initialize <<<
+#

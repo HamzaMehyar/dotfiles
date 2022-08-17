@@ -42,7 +42,7 @@ let g:NERDTreeMapPreview="<F4>"
 "map <Leader>a :call RunAllSpecs()<CR>
 
 " Silver Searcherrrrr
-" nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 nnoremap \ :Ag<SPACE>
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 

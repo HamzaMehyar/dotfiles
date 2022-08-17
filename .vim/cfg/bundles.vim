@@ -17,7 +17,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Plugin 'psliwka/vim-smoothie'
 Plugin 'tyrannicaltoucan/vim-quantum'
-Plugin 'APZelos/blamer.nvim'
 Plugin 'vim-airline/vim-airline'               " Nice status bar
 Plugin 'vim-airline/vim-airline-themes'        " Themes for airline
 Plugin 'ryanoasis/vim-devicons'
@@ -109,6 +108,7 @@ Plugin 'tpope/vim-unimpaired'     " Complementary mapping pairs
 "                          Git
 " =====================================================================
 
+Plugin 'APZelos/blamer.nvim'
 Plugin 'tpope/vim-fugitive'         " Git wrapper
 Plugin 'airblade/vim-gitgutter'     " Show git diff on the right
 

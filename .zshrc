@@ -55,6 +55,8 @@ alias lls="ls"
 
 #git
 alias it="git"
+alias gut="git"
+
 alias gds="git diff --staged"
 alias gdh="git diff HEAD^"
 alias grsp="git restore --staged -p"
@@ -69,9 +71,6 @@ alias vup="amixer sset 'Master' 5%+"
 alias vd="amixer sset 'Master' 5%-"
 alias task="taskell ~/.config/taskell/taskell.md"
 alias taskill="task"
-alias red="~/workspace/jawaker/redis.sh"
-alias jawaker="~/workspace/jawaker/jawaker.sh"
-alias betterjawaker="~/workspace/jawaker/betterjawaker.sh"
 
 alias rspec="bundle exec rspec"
 
@@ -87,9 +86,7 @@ bandit(){
   ssh bandit${1}@bandit.labs.overthewire.org -p 2220
 }
 
-gdiff(){
-  git diff ${1} -- . ':(exclude)/home/hamza/workspace/jawaker/web/db/structure.sql' ':(exclude)/home/hamza/workspace/jawaker/web/Gemfile.lock' ':(exclude)/home/hamza/workspace/jawaker/jawaker.sh'
-}
+source ~/.zjw
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

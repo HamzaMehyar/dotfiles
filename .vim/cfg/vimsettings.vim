@@ -58,6 +58,7 @@ hi CursorColumn cterm=NONE ctermbg=black                     " Set a vertical ba
 set hlsearch
 set incsearch
 hi Search ctermfg=green ctermbg=NONE cterm=underline         " Search results are coloured and underlined
+hi Normal guibg=NONE ctermbg=2
 
 " =====================================================================
 "                              vim Settings

@@ -24,7 +24,7 @@ exec --no-startup-id nm-applet
 floating_modifier $mod
 
 #________________________________Borders_________________________________
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 #_________________________________________________________________________
 
 #_________________________________Keyboard Shortcuts___________________________________

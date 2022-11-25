@@ -17,6 +17,10 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
+#IGNORE
+export HISTCONTROL=ignoreboth
+#
+
 #_____________________________________________
 setxkbmap -option caps:escape
 #_____________________________________________
@@ -77,13 +81,33 @@ alias rspec="bundle exec rspec"
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-
 get(){
-  git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.js' ':!*.ejs' ':!*.html*'
+  git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.svg*' ':!*.js' ':!*.ejs' ':!*.html*'
 }
 
 bandit(){
   ssh bandit${1}@bandit.labs.overthewire.org -p 2220
+}
+
+
+sig_term_child() {
+  kill -TERM "$child" 2>/dev/null
+}
+
+read_engine_logs(){
+  trap sig_term_child SIGTERM
+  while read -t 5 -r line;
+  do
+    prefix_pose=$(echo "$line" | grep -ob 'message' | grep -oE '[0-9]+' )
+    suffix_pose=$(echo "$line" | grep -ob 'remote_ip' | grep -oE '[0-9]+')
+    suffix_pose_2="$(($suffix_pose-3))"
+    prefix_pose_2="$(($prefix_pose))"
+
+    if (( suffix_pose_2!=-3 ))
+    then
+      echo $line |cut -c "$prefix_pose_2-$suffix_pose_2"
+    fi
+  done
 }
 
 source ~/.zjw

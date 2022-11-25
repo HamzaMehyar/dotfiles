@@ -16,9 +16,15 @@ let g:mapleader = ","
 "folding
 let g:ruby_fold_lines_limit = 700
 "======================================================================
+"                          Conjure
+" =====================================================================
+let g:conjure#log#hud#height = 0.25
+let g:conjure#log#hud#width = 0.6
+let g:conjure#log#wrap = 1
+let g:syntastic_clojure_checkers = ['eastwood']
+"======================================================================
 "                          ALE
 " =====================================================================
-
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '!'
 
@@ -59,7 +65,7 @@ let g:airline#extensions#tabline#enabled = 1
 "                         Clojure Format CLJFMT
 " =====================================================================
 autocmd User FireplacePreConnect call fireplace#register_port_file(expand('~/.lein/repl-port'), '/tmp')
-let g:clj_fmt_autosave = 1
+let g:clj_fmt_autosave = 0
 let g:clj_fmt_config = '{:indentation? true, :remove-surrounding-whitespace? false, :remove-trailing-whitespace? true, :remove-consecutive-blank-lines? true, :insert-missing-whitespace? true, :align-associative? true}' ", :indents {#"^\w" [[:inner 0]], #".*" [[:inner 0]]}
 
 
@@ -87,8 +93,8 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 "======================================================================
 "                          Silver Searcher
 "======================================================================
-let &grepprg= 'ag --nogroup  --ignore ' . shellescape(".*log,.*tag,*.o,*.obj,*~,*.pyc,.git/**,tags,cscope*")
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let &grepprg= 'ag --nogroup  --ignore ' . shellescape(".*html,.*haml,.*js,.*cljs,.*log,.*tag,*.o,*.obj,*~,*.pyc,.git/**,tags,cscope*")
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g "" --ignore "*.html" --ignore "*.haml"'
 let g:ctrlp_use_command = 0
 
 " bind \ (backward slash) to grep shortcut
@@ -102,6 +108,18 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 " let g:UltiSnipsUsePythonVersion    = 2.7
+
+
+" =====================================================================
+"                          vim local history
+" =====================================================================
+"
+if !isdirectory("/home/hamza/undos/.vim-undo-dir")
+  call mkdir("/home/hamza/undos/.local-history", "", 0700)
+endif
+
+let g:local_history_path = '/home/hamza/undos/.local-history'
+let g:local_history_max_changes = 100
 
 " =====================================================================
 "                          YCM

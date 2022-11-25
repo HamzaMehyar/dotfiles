@@ -42,6 +42,7 @@ Plugin 'ggreer/the_silver_searcher'     " Silverrrrrrrrrrrrr searcherrr :Ag
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'            " File structure tree
 Plugin 'dbakker/vim-projectroot'        " sets project root to git init
+Plugin 'dinhhuy258/vim-local-history'
 
 " =====================================================================
 "                          Syntax and linting
@@ -76,14 +77,16 @@ Plugin 'vim-utils/vim-ruby-fold'
 " =====================================================================
 
 Plugin 'guns/vim-clojure-static.git'
+Plugin 'gberenfield/cljfold.vim' "provides folding for clojure
 Plugin 'guns/vim-clojure-highlight.git'
 Plugin 'venantius/vim-cljfmt' "clojure format tool
 Plugin 'Olical/conjure'
+Plugin 'snoe/clj-refactor.nvim'
 
+Plugin 'venantius/vim-eastwood' "clojure linting
+Plugin 'tpope/vim-fireplace.git'
 " Plugin 'liquidz/vim-iced'
 " Plugin 'dgrnbrg/redl'
-" Plugin 'venantius/vim-eastwood' "clojure linting
-" Plugin 'tpope/vim-fireplace.git'
 " Plugin 'tpope/vim-leiningen.git'
 " Plugin 'tpope/vim-dispatch.git'
 " Plugin 'tpope/vim-salve.git'

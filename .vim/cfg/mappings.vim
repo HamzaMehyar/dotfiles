@@ -5,7 +5,13 @@ end
 filetype off
 
 " CtrlP + Ctags
-nnoremap <leader>. :CtrlPCurFile<cr>
+nnoremap <leader>. :CtrlP<cr>
+
+"Conjure
+map <leader>k :let g:conjure#log#hud#height+=0.1<cr>
+map <leader>i :let g:conjure#log#hud#height-=0.1<cr>
+map <leader>j :let g:conjure#log#hud#width+=0.1<cr>
+map <leader>l :let g:conjure#log#hud#width-=0.1<cr>
 
 " splits movement
 map <C-h> <C-W>h

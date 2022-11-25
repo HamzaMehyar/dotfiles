@@ -28,10 +28,10 @@ autocmd BufEnter * call SetTerminalTitle()
 " =====================================================================
 "                           Persistant Undo
 " =====================================================================
-if !isdirectory("/tmp/.vim-undo-dir")
-    call mkdir("/tmp/.vim-undo-dir", "", 0700)
+if !isdirectory("/home/hamza/undos/.vim-undo-dir")
+    call mkdir("/home/hamza/undos/.vim-undo-dir", "", 0700)
 endif
-set undodir=/tmp/.vim-undo-dir
+set undodir=/home/hamza/undos/.vim-undo-dir
 set undofile
 
 " =====================================================================
@@ -126,6 +126,7 @@ augroup vimrcEx
 
   " Allow stylesheets to autocomplete hyphenated words
   autocmd FileType css,scss,sass setlocal iskeyword+=-
+  autocmd FileType clj,cljs,cljc setlocal iskeyword=65-90,95,97-122,48-57 "the same: a-z,_,A-Z,0-9
 augroup END
 
 if !exists(":DiffOrig")

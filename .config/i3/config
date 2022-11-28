@@ -44,13 +44,13 @@ bindsym XF86AudioMute exec amixer sset 'Master' toggle
 #bindsym $mod+bracketright exec amixer sset 'Master' 5%+
 #bindsym $mod+bracketleft exec amixer sset 'Master' 5%-
 
-bindsym $mod+Home exec --no-startup-id ~/.config/i3/volume.sh "100%"
-bindsym $mod+End exec --no-startup-id ~/.config/i3/volume.sh "0%"
-bindsym $mod+bracketright exec --no-startup-id ~/.config/i3/volume.sh "+5%"
-bindsym $mod+bracketleft exec --no-startup-id ~/.config/i3/volume.sh "-5%"
+bindsym $mod+Home exec --no-startup-id ~/.config/i3/volume.sh "s" "100"
+bindsym $mod+End exec --no-startup-id ~/.config/i3/volume.sh "s" "0"
+bindsym $mod+bracketright exec --no-startup-id ~/.config/i3/volume.sh "+" "5"
+bindsym $mod+bracketleft exec --no-startup-id ~/.config/i3/volume.sh  "-" "5"
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/volume.sh "+5%"
-bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/volume.sh "-5%"
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/volume.sh "+" "5"
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/volume.sh "-" "5"
 
 bindsym $mod+Next exec --no-startup-id ~/.config/i3/volume.sh "-5%"
 bindsym $mod+Prior exec --no-startup-id ~/.config/i3/volume.sh "+5%"

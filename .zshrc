@@ -78,6 +78,9 @@ alias taskill="task"
 
 alias rspec="bundle exec rspec"
 
+alias l="/bin/ls --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
+alias ll="l"
+
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
 alias 5awa="sudo"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -109,6 +112,7 @@ read_engine_logs(){
     fi
   done
 }
+
 
 source ~/.zjw
 

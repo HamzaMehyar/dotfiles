@@ -43,6 +43,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'            " File structure tree
 Plugin 'dbakker/vim-projectroot'        " sets project root to git init
 Plugin 'dinhhuy258/vim-local-history'
+Plugin 'bogado/file-line' " Allows using the format filename:linenumber, when opening vim
 
 " =====================================================================
 "                          Syntax and linting
@@ -60,9 +61,9 @@ Plugin 'SirVer/ultisnips'
 " =====================================================================
 
 " Plugin 'https://gitlab.com/mixedCase/deoplete-omnisharp.git'
-" Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
 
-Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
+" Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
 Plugin 'ervandew/supertab'                                          " tab to cycle autocomplete
 Plugin 'honza/vim-snippets'                                         " Snippets are separated from the engine
 Plugin 'shinglyu/vim-codespell' "language spell checker
@@ -82,8 +83,9 @@ Plugin 'guns/vim-clojure-highlight.git'
 Plugin 'venantius/vim-cljfmt' "clojure format tool
 Plugin 'Olical/conjure'
 Plugin 'snoe/clj-refactor.nvim'
+Plugin 'clojure-vim/async-clj-omni'
 
-Plugin 'venantius/vim-eastwood' "clojure linting
+" Plugin 'venantius/vim-eastwood' "clojure linting
 Plugin 'tpope/vim-fireplace.git'
 " Plugin 'liquidz/vim-iced'
 " Plugin 'dgrnbrg/redl'

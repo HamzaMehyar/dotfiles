@@ -22,6 +22,9 @@ let g:conjure#log#hud#height = 0.25
 let g:conjure#log#hud#width = 0.6
 let g:conjure#log#wrap = 1
 let g:syntastic_clojure_checkers = ['eastwood']
+
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option('keyword_patterns', {'clojure': '[\w!$%&*+/:<=>?@\^_~\-\.#]*'})
 "======================================================================
 "                          ALE
 " =====================================================================
@@ -31,7 +34,9 @@ let g:ale_sign_warning = '!'
 highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 let g:ale_cpp_gcc_options = ' -std=c++17 -Wno-unused -i system /usr/include/c++/10.2.0/ -I /usr/include/c++/10.2.0/ '
+let g:ale_linters = {'clojure': ['clj-kondo']}
 
+" let g:ale_linters = {'clojure': ['clj-kondo']}
 
 " =====================================================================
 "                         AutoFormat

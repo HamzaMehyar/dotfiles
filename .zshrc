@@ -78,7 +78,7 @@ alias taskill="task"
 
 alias rspec="bundle exec rspec"
 
-alias l="/bin/ls --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
+alias l="/bin/ls -h --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
 alias ll="l"
 
 alias aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa="sudo"
@@ -86,6 +86,9 @@ alias 5awa="sudo"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 get(){
   git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.svg*' ':!*.sql*' ':!*.js' ':!*.ejs' ':!*.html*'
+}
+getblame() {
+    get $1 | while IFS=: read i j k; do git blame -L $j,$j $i | cat; done
 }
 
 bandit(){

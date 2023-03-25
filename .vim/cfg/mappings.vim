@@ -38,6 +38,8 @@ map <F3> :NERDTreeFind<CR>
 
 map <C-n> :Autoformat<CR>
 
+vmap <C-c> "+y
+
 let g:NERDTreeMapActivateNode="<F3>"
 let g:NERDTreeMapPreview="<F4>"
 

@@ -28,10 +28,10 @@ autocmd BufEnter * call SetTerminalTitle()
 " =====================================================================
 "                           Persistant Undo
 " =====================================================================
-if !isdirectory("/home/hamza/undos/.vim-undo-dir")
-    call mkdir("/home/hamza/undos/.vim-undo-dir", "", 0700)
+if !isdirectory($HOME."/.vim/.vim-undo-dir")
+    call mkdir($HOME."/.vim/.vim-undo-dir", "", 0700)
 endif
-set undodir=/home/hamza/undos/.vim-undo-dir
+set undodir=~/.vim/.vim-undo-dir
 set undofile
 
 " =====================================================================

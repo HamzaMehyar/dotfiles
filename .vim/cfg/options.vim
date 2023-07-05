@@ -119,11 +119,11 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 "                          vim local history
 " =====================================================================
 "
-if !isdirectory("/home/hamza/undos/.vim-undo-dir")
-  call mkdir("/home/hamza/undos/.local-history", "", 0700)
+if !isdirectory($HOME."/.vim/.vim-undo-dir")
+    call mkdir($HOME."/.vim/.vim-undo-dir", "", 0700)
 endif
 
-let g:local_history_path = '/home/hamza/undos/.local-history'
+let g:local_history_path = '~/.vim/.local-history'
 let g:local_history_max_changes = 100
 
 " =====================================================================

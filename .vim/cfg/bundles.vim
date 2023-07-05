@@ -73,6 +73,13 @@ Plugin 'shinglyu/vim-codespell' "language spell checker
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-utils/vim-ruby-fold'
 
+"=====================================================================
+"                          Rust
+" =====================================================================
+Plugin 'rust-lang/rust.vim'
+Plugin 'fannheyward/coc-rust-analyzer'
+Plugin 'neoclide/coc.nvim'
+
 " =====================================================================
 "                          Clojure
 " =====================================================================

@@ -67,6 +67,21 @@ compare_commits() {
     branch_2_commits=$(git log --pretty=format:"%s" $2)
 
     diff <(echo "$branch_1_commits") <(echo "$branch_2_commits")
+  }
+
+# lists last previously visited branches
+checkouts() {
+  branches=($(git reflog | awk '/moving from / {print $6}' | cut -d' ' -f1 | head -n 15 | awk '!x[$0]++'))
+
+  INDEX=1
+  for i in $branches; do
+    echo "${INDEX}: $i"
+    let INDEX=${INDEX}+1
+  done
+
+  read number
+  echo "${branches[$number]}"
+  git checkout "${branches[$number]}"
 }
 
 source ~/.zjw

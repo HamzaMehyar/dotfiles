@@ -6,7 +6,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always "setxkbmap -model pc104 -layout us,ara -variant ,, -option grp:alt_shift_toggle"
 exec "setxkbmap -layout us,ara"
 exec "setxkbmap -option 'grp:alt_shift_toggle'"
-exec --no-startup-id ~/.picom/build/src/picom -CGb
+exec --no-startup-id ~/.picom/build/src/picom -CGb --backend glx
 
 #--Graphics
 exec "autorandr --change work" # this expect you to have autorandr installed  and saved preset to 'work'
@@ -31,7 +31,7 @@ for_window [class="^.*"] border pixel 2
 
 #new windows
 bindsym $mod+Return exec konsole
-bindsym $mod+l exec i3lock --color=000000
+bindsym $mod+l exec xsecurelock
 
 
 # Windows

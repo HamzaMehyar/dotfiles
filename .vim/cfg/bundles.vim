@@ -14,47 +14,47 @@ Plugin 'gmarik/Vundle.vim'
 " =====================================================================
 "                          Colors And Appearance
 " =====================================================================
+" Plugin declarations in vimrc
 
-" Plugin 'psliwka/vim-smoothie'
-Plugin 'tyrannicaltoucan/vim-quantum'
-Plugin 'vim-airline/vim-airline'               " Nice status bar
-Plugin 'vim-airline/vim-airline-themes'        " Themes for airline
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'ntpeters/vim-better-whitespace'        " Tracks whitespace
-Plugin 'Yggdroot/indentLine'                   " indents line
-Plugin 'preservim/tagbar'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'     " Number toggling
+" Plugin 'psliwka/vim-smoothie'                " Adds smooth scrolling and cursor movement in Vim.
+Plugin 'tyrannicaltoucan/vim-quantum'          " Provides a set of utilities and enhancements for Vim.
+Plugin 'vim-airline/vim-airline'               " Nice status bar (tab line) at the bottom of the Vim window.
+Plugin 'vim-airline/vim-airline-themes'        " Themes for the Airline status bar, allowing customization.
+Plugin 'ryanoasis/vim-devicons'                " Displays file icons in Vim, making it easier to recognize file types.
+Plugin 'ntpeters/vim-better-whitespace'        " Helps track and manage whitespace in the text.
+Plugin 'Yggdroot/indentLine'                   " Shows vertical lines to indicate the indentation level in the code.
+Plugin 'preservim/tagbar'                      " Allows you to browse the tags (functions, classes, etc.) of the current file in a sidebar.
+Plugin 'jeffkreeftmeijer/vim-numbertoggle'     " Toggles line numbers in Vim, allowing you to show/hide line numbers.
 
 "Plugin 'glepnir/galaxyline.nvim'
 "Plugin 'jtratner/vim-flavored-markdown'        " Highlighting for Markdown snippets
-let g:blamer_enabled = 1
 " =====================================================================
 "                          Windows
 " =====================================================================
 
-Plugin 'simeji/winresizer'
+Plugin 'simeji/winresizer' " Adds an easy Resize mode
 
 " =====================================================================
 "                          Files and Search
 " =====================================================================
 
-Plugin 'ggreer/the_silver_searcher'     " Silverrrrrrrrrrrrr searcherrr :Ag
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'            " File structure tree
-Plugin 'dbakker/vim-projectroot'        " sets project root to git init
-Plugin 'dinhhuy258/vim-local-history'
-Plugin 'bogado/file-line' " Allows using the format filename:linenumber, when opening vim
+Plugin 'ggreer/the_silver_searcher'      " Fast text search tool.
+Plugin 'kien/ctrlp.vim'                  " Fuzzy file finder.
+Plugin 'scrooloose/nerdtree'             " File structure tree.
+Plugin 'dbakker/vim-projectroot'         " Sets project root to git init.
+Plugin 'dinhhuy258/vim-local-history'    " Local history for files.
+Plugin 'bogado/file-line'                " Allows using the format filename:linenumber, when opening vim
 
 " =====================================================================
 "                          Syntax and linting
 " =====================================================================
 
 Plugin 'vim-scripts/Tabular'         " Line up text :Tab /=
-Plugin 'dense-analysis/ale'          " syntax check
+Plugin 'dense-analysis/ale'          " Linting Engine
 Plugin 'Chiel92/vim-autoformat'      " Format on save
 Plugin 'OmniSharp/omnisharp-vim'
-Plugin 'SirVer/ultisnips'
-" Plugin 'vim-syntastic/syntastic'
+Plugin 'SirVer/ultisnips'            " Snippets
+  " Plugin 'vim-syntastic/syntastic'
 
 " =====================================================================
 "                          AutoComplete and snippits
@@ -63,10 +63,10 @@ Plugin 'SirVer/ultisnips'
 " Plugin 'https://gitlab.com/mixedCase/deoplete-omnisharp.git'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }     " Auto Complete
 
-" Plugin 'Valloric/YouCompleteMe'                                     " Auto Complete
-Plugin 'ervandew/supertab'                                          " tab to cycle autocomplete
-Plugin 'honza/vim-snippets'                                         " Snippets are separated from the engine
-Plugin 'shinglyu/vim-codespell' "language spell checker
+" Plugin 'Valloric/YouCompleteMe'    " Auto Complete
+Plugin 'ervandew/supertab'           " tab to cycle autocomplete
+Plugin 'honza/vim-snippets'          " Snippets are separated from the engine
+Plugin 'shinglyu/vim-codespell'      "language spell checker
 "=====================================================================
 "                          Ruby
 " =====================================================================
@@ -106,7 +106,7 @@ Plugin 'tpope/vim-fireplace.git'
 "                          Numbers
 " =====================================================================
 
-Plugin 'glts/vim-magnum'     " Insert/delete {[( in pairs
+Plugin 'glts/vim-magnum'     " Big integer library
 " =====================================================================
 "                          Pairs & Comments
 " =====================================================================

@@ -63,15 +63,15 @@ getblame() {
 }
 
 compare_commits() {
-    branch_1_commits=$(git log --pretty=format:"%s" $1)
-    branch_2_commits=$(git log --pretty=format:"%s" $2)
+    branch_1_commits=$(git log --pretty=format:"%s" $1| sort)
+    branch_2_commits=$(git log --pretty=format:"%s" $2| sort)
 
     diff <(echo "$branch_1_commits") <(echo "$branch_2_commits")
   }
 
 # lists last previously visited branches
 checkouts() {
-  branches=($(git reflog | awk '/moving from / {print $6}' | cut -d' ' -f1 | head -n 15 | awk '!x[$0]++'))
+  branches=($(git reflog | awk '/moving from / {print $6}' | cut -d' ' -f1 | head -n 25 | awk '!x[$0]++'))
 
   INDEX=1
   for i in $branches; do

@@ -13,7 +13,7 @@ let g:mapleader = ","
 
 
 "
-"folding
+" Folding
 let g:ruby_fold_lines_limit = 700
 "======================================================================
 "                          Conjure
@@ -35,8 +35,6 @@ highlight ALEErrorSign ctermbg=NONE ctermfg=red
 highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
 let g:ale_cpp_gcc_options = ' -std=c++17 -Wno-unused -i system /usr/include/c++/10.2.0/ -I /usr/include/c++/10.2.0/ '
 let g:ale_linters = {'clojure': ['clj-kondo']}
-
-" let g:ale_linters = {'clojure': ['clj-kondo']}
 
 " =====================================================================
 "                         AutoFormat
@@ -123,7 +121,7 @@ if !isdirectory($HOME."/.vim/.vim-undo-dir")
     call mkdir($HOME."/.vim/.vim-undo-dir", "", 0700)
 endif
 
-let g:local_history_path = '~/.vim/.local-history'
+let g:local_history_path = $HOME."/.vim/.vim-undo-dir"
 let g:local_history_max_changes = 100
 
 " =====================================================================

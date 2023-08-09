@@ -123,6 +123,7 @@ endif
 
 let g:local_history_path = $HOME."/.vim/.vim-undo-dir"
 let g:local_history_max_changes = 100
+let g:local_history_new_change_delay = 30
 
 " =====================================================================
 "                          YCM

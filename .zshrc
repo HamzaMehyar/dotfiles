@@ -5,7 +5,6 @@ ZSH_THEME="minimal"
 plugins=(
   git
   zsh-autosuggestions
-  zsh-vi-mode
   zsh-syntax-highlighting
   sudo
   web-search
@@ -15,6 +14,8 @@ plugins=(
 #IGNORE
 export HISTCONTROL=ignoreboth
 #
+
+[[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
 
 #_____________________________________________
 setxkbmap -option caps:escape
@@ -26,8 +27,11 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 export VISUAL='nvim'
+export TERM=xterm-256color
+echo '\e[5 q' #turns curson into a line
 
-export PATH="$HOME/.redis/src:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
@@ -35,31 +39,34 @@ export PATH="$HOME/projects/diff-so-fancy:$PATH"
 export PATH="/home/hamza/.local/bin/:$PATH"
 export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:/usr/lib/dart/bin"
+export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
-alias n="nvim"
 alias vim="nvim"
-alias v="nvim"
 
-alias lls="ls"
 alias l="/bin/ls -h --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
-alias ll="l"
 
-alias it="git"
-alias gut="git"
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 alias :q="exit"
 alias :x="exit"
-alias weather="curl wttr.in/Amman"
 alias task="taskell ~/.config/taskell/taskell.md"
+alias vz='vim $(fzf -m)'
 
-
-get(){
-  git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.svg*' ':!*.sql*' ':!*.js' ':!*.ejs' ':!*.html*' ':!*.meta*' ':!*.unity*' ':!*.prefab*' ':!*.asset*' ':!*.json*'
+vrz(){
+    vim $(rg $1 | fzf)
 }
 
-getblame() {
-    get $1 | while IFS=: read i j k; do git blame -L $j,$j $i | cat; done
+# make fuzzy use gitignore
+# remove tmp,css,svg,non data files html unity prefabs etc.
+# make a fuzzy with rg command
+# use rg in vim
+# remove every unused bundle in vim
+# clenaup vim stetings
+# remove any unused vim binding
+# make vim fzf ignore all those js files too
+
+get(){
+  git grep -i -B"${2:-0}" -A"${3:-0}" "$1" ':!*.css*' ':!*.svg*' ':!*.sql*' ':!*.js' ':!*.ejs' ':!*.html*' ':!*.meta*' ':!*.unity*' ':!*.prefab*' ':!*.asset*'
 }
 
 compare_commits() {
@@ -83,5 +90,22 @@ checkouts() {
   echo "${branches[$number]}"
   git checkout "${branches[$number]}"
 }
+
+__tmux-screen-autocomplete__() {
+	tmux capture-pane -pS -1000 |
+	  tac |
+	  grep -P -o "[\w\d_\-\.\/]+" |
+    awk '!x[$0]++' |
+	  fzf --no-sort --exact +i
+}
+
+__tmux-screen-autocomplete-inline__() {
+  local selected="$(__tmux-screen-autocomplete__)"
+  LBUFFER="${LBUFFER:0:$CURSOR}$selected${LBUFFER:$CURSOR}"
+  ((CURSOR += ${#selected}))
+}
+
+zle -N __tmux-screen-autocomplete-inline__
+bindkey '^S' __tmux-screen-autocomplete-inline__
 
 source ~/.zjw

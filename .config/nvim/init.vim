@@ -5,35 +5,20 @@ set spelllang=en_gb
 " =====================================================================
 "                                Hamza's vim settings
 " =====================================================================
-"
-" =====================================================================
-"                                Plugins
-" =====================================================================
 
 if filereadable(expand("~/.vim/cfg/bundles.vim"))
   source ~/.vim/cfg/bundles.vim
 endif
 
-" =====================================================================
-"                            Vim Settings
-" =====================================================================
-
-if filereadable(expand("~/.vim/cfg/vimsettings.vim"))
-  source ~/.vim/cfg/vimsettings.vim
+if filereadable(expand("~/.vim/cfg/vim_settings.vim"))
+  source ~/.vim/cfg/vim_settings.vim
 endif
 
-" =====================================================================
-"                            Plugin Options
-" =====================================================================
-
-if filereadable(expand("~/.vim/cfg/options.vim"))
-  source ~/.vim/cfg/options.vim
+if filereadable(expand("~/.vim/cfg/bundle_settings.vim"))
+  source ~/.vim/cfg/bundle_settings.vim
 endif
-
-" =====================================================================
-"                              Mappings
-" =====================================================================
 
 if filereadable(expand("~/.vim/cfg/mappings.vim"))
   source ~/.vim/cfg/mappings.vim
 endif
+

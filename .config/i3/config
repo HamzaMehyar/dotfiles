@@ -24,6 +24,7 @@ exec --no-startup-id nm-applet
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+exec --no-startup-id nitrogen --restore
 #________________________________Borders_________________________________
 for_window [class="^.*"] border pixel 2
 #_________________________________________________________________________

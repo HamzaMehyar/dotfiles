@@ -7,7 +7,6 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   sudo
-  web-search
   autojump
 )
 

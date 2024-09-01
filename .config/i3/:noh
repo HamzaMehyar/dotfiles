@@ -1,0 +1,16 @@
+#!/bin/bash
+
+wallpaper_path="~/wall"
+
+# Get a list of connected monitors
+monitors=($(xrandr --query | grep ' connected' | cut -d ' ' -f1))
+
+# Set a random wallpaper for each monitor
+for monitor in "${monitors[@]}"; do
+    # Get a random wallpaper from the specified path
+    random_wallpaper=$(find "$wallpaper_path" -type f -name '*.jpg' -o -name '*.png' | shuf -n 1)
+
+    # Set the wallpaper for the current monitor
+    feh --bg-fill --no-xinerama --monitor "$monitor" "$random_wallpaper"
+done
+

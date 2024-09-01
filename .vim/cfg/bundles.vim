@@ -45,9 +45,9 @@ Plug 'OmniSharp/omnisharp-vim'
 "                          AutoComplete and snippits
 " =====================================================================
 Plug 'ervandew/supertab'           " tab to cycle autocomplete
-Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
-Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
-Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
+" Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
+" Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+" Plug 'ms-jpq/coq.thirdparty', {'branch': '3p'}
 Plug 'shinglyu/vim-codespell'      " language spell checker
 "=====================================================================
 "                          Ruby
@@ -58,6 +58,12 @@ Plug 'vim-ruby/vim-ruby'
 "                          Rust
 " =====================================================================
 Plug 'rust-lang/rust.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'simrat39/rust-tools.nvim'
+
+"=====================================================================
+"                          Python
+" =====================================================================
 
 " =====================================================================
 "                          Clojure

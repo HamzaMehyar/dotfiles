@@ -2,7 +2,7 @@ set $mod Mod4
 
 font pango:monospace 8
 
-exec --no-startup-id xautolock -time 3 -locker 'xsecurelock' -notify 60 -notifier "notify-send 'Screen will lock in 15 s'" -detectsleep -killtime 10 -killer "systemctl suspend"
+exec --no-startup-id xautolock -time 3 -locker 'env XSECURELOCK_SAVER=/home/hamza/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock' -notify 60 -notifier "notify-send 'Screen will lock in 15 s'" -detectsleep -killtime 120 -killer "systemctl suspend"
 
 exec_always "setxkbmap -model pc104 -layout us,ara -variant ,, -option grp:alt_shift_toggle"
 exec "setxkbmap -layout us,ara"
@@ -16,14 +16,13 @@ exec "autorandr --change work" # this expect you to have autorandr installed  an
 exec_always --no-startup-id ~/.config/polybar/polybar.sh &
 #_________________________________________________________________________
 
-#_________________________________Compton___________________________________
-exec_always --no-startup-id compton -i 1 &
 #_________________________________________________________________________
 exec --no-startup-id nm-applet
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+exec_always --no-startup-id feh --bg-scale -rzsZFD 600 ~/wall/
 exec --no-startup-id nitrogen --restore
 #________________________________Borders_________________________________
 for_window [class="^.*"] border pixel 2
@@ -32,10 +31,11 @@ for_window [class="^.*"] border pixel 2
 #_________________________________Keyboard Shortcuts___________________________________
 
 #new windows
-bindsym $mod+Return exec konsole
-bindsym $mod+l exec xsecurelock
+bindsym $mod+Return exec wezterm
+bindsym $mod+l exec env XSECURELOCK_SAVER=/home/hamza/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock
 
 
+for_window [class=".*"] floating disable
 # Windows
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+f focus parent; fullscreen; focus child

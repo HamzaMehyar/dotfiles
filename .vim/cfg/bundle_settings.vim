@@ -84,3 +84,5 @@ filetype on
 let g:ale_python_pylint_executable = $HOME."/anaconda3/bin/pylint"
 let g:ale_python_flake8_executable = $HOME."/anaconda3/bin/flake8"
 let g:ale_linters = {'python': ['pylint']}
+
+let g:indentLine_setConceal = 0

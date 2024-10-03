@@ -143,6 +143,14 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+greater move workspace to output right
 bindsym $mod+less move workspace to output left
 
+for_window [window_role="pop-up"]                       floating enable
+for_window [class="Unity"] floating enable
+for_window [window_role="bubble"]                       floating enable 
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable 
+for_window [window_type="menu"]                         floating enable
+
 
 # I3 settings
 bindsym $mod+Shift+c reload

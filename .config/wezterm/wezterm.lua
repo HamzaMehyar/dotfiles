@@ -5,7 +5,7 @@ local config = {}
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
-config.window_background_opacity = 0.88
+config.window_background_opacity = 0.95
 config.scrollback_lines = 100000
 
 config.color_scheme = 'Leaf'

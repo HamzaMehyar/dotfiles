@@ -76,8 +76,13 @@ if !isdirectory($HOME."/.vim/.vim-undo-dir")
 endif
 
 let g:local_history_path = $HOME."/.vim/.vim-undo-dir"
-let g:local_history_max_changes = 100
+let g:local_history_max_changes = 3000
 let g:local_history_new_change_delay = 30
 
 filetype on
 
+let g:ale_python_pylint_executable = $HOME."/anaconda3/bin/pylint"
+let g:ale_python_flake8_executable = $HOME."/anaconda3/bin/flake8"
+let g:ale_linters = {'python': ['pylint']}
+
+let g:indentLine_setConceal = 0

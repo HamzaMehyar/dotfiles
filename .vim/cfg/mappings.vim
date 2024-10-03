@@ -4,6 +4,12 @@ end
 
 filetype off
 
+
+let mapleader = ","
+let g:mapleader = ","
+
+let maplocalleader = " "
+
 " CtrlP + Ctags
 nnoremap <leader>. :CtrlP<cr>
 
@@ -26,7 +32,7 @@ nmap k gk
 map <C-s> ct_
 
 map <F3> :NERDTreeFind<CR>
-map <Tab> :NERDTreeToggle<CR>
+" map <Tab> :NERDTreeToggle<CR>
 
 map <C-n> :Autoformat<CR>
 
@@ -44,7 +50,6 @@ nnoremap <silent> <C-S-Right> <c-w>l
 nnoremap <silent> <C-S-Left> <c-w>h
 nnoremap <silent> <C-S-Up> <c-w>k
 nnoremap <silent> <C-S-Down> <c-w>j
-let maplocalleader = " "
 
 
 "maps upper-case for save quit and update

@@ -12,6 +12,8 @@ plugins=(
 
 #IGNORE
 export HISTCONTROL=ignoreboth
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
 #
 
 [[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
@@ -34,10 +36,14 @@ export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.kibana/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
+export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
+export PATH="$HOME/py_envs/python12/bin:$PATH"
 export PATH="/home/hamza/.local/bin/:$PATH"
 export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:/usr/lib/dart/bin"
+export PATH="$HOME/anaconda3/bin/:$PATH"
+
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 alias vim="nvim"
@@ -76,8 +82,8 @@ compare_commits() {
 }
 
 # lists last previously visited branches
-checkouts() {
-  branches=($(git reflog | awk '/moving from / {print $6}' | cut -d' ' -f1 | head -n 25 | awk '!x[$0]++'))
+couts() {
+  branches=($(git reflog | awk '/moving from / {print $6}' | cut -d' ' -f1 | head -n 50 | awk '!x[$0]++'))
 
   INDEX=1
   for i in $branches; do
@@ -90,21 +96,22 @@ checkouts() {
   git checkout "${branches[$number]}"
 }
 
-__tmux-screen-autocomplete__() {
-	tmux capture-pane -pS -1000 |
-	  tac |
-	  grep -P -o "[\w\d_\-\.\/]+" |
-    awk '!x[$0]++' |
-	  fzf --no-sort --exact +i
-}
-
-__tmux-screen-autocomplete-inline__() {
-  local selected="$(__tmux-screen-autocomplete__)"
-  LBUFFER="${LBUFFER:0:$CURSOR}$selected${LBUFFER:$CURSOR}"
-  ((CURSOR += ${#selected}))
-}
-
-zle -N __tmux-screen-autocomplete-inline__
-bindkey '^S' __tmux-screen-autocomplete-inline__
-
 source ~/.zjw
+
+export XSECURELOCK_SAVER="/home/hamza/.config/i3/lock_screen_screensaver.sh"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/hamza/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/hamza/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/hamza/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/hamza/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+

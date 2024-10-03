@@ -56,6 +56,7 @@ hi CursorColumn cterm=NONE ctermbg=black                     " Set a vertical ba
 
 set hlsearch
 set incsearch
+set termbidi                                                 " Enable bidirectional text support, for Arabic
 
 set mouse= "unset mouse
 hi Search ctermfg=green ctermbg=NONE cterm=underline         " Search results are coloured and underlined

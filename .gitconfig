@@ -1,0 +1,43 @@
+[user]
+	email = test@test.com
+	name = Hamza Mehyar
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	# diffFilter = diff-so-fancy --patch
+[color]
+	ui = true
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[diff]
+	tool = vimdiff3
+[merge]
+	tool = vimdiff3
+[difftool "vimdiff3"]
+	path = nvim
+[mergetool "vimdiff3"]
+	path = nvim
+[alias]
+	gud = show --format=\"% git gud scrub\" -s
+[grep]
+	lineNumber = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+  fza = "!git ls-files -m -o --exclude-standard | fzf -m --print0 | xargs -0 git add"
+[push]
+	autoSetupRemote = true

@@ -2,7 +2,7 @@ set $mod Mod4
 
 font pango:monospace 8
 
-exec --no-startup-id xautolock -time 3 -locker 'env XSECURELOCK_SAVER=/home/hamza/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock' -notify 60 -notifier "notify-send 'Screen will lock in 15 s'" -detectsleep -killtime 120 -killer "systemctl suspend"
+exec --no-startup-id xautolock -time 3 -locker 'env XSECURELOCK_SAVER=~/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock' -notify 60 -notifier "notify-send 'Screen will lock in 15 s'" -detectsleep -killtime 120 -killer "systemctl suspend"
 
 exec_always "setxkbmap -model pc104 -layout us,ara -variant ,, -option grp:alt_shift_toggle"
 exec "setxkbmap -layout us,ara"
@@ -33,7 +33,7 @@ for_window [class="^.*"] border pixel 2
 
 #new windows
 bindsym $mod+Return exec wezterm
-bindsym $mod+l exec env XSECURELOCK_SAVER=/home/hamza/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock
+bindsym $mod+l exec env XSECURELOCK_SAVER=~/.local/bin/saver_mpv XSECURELOCK_WANT_FIRST_KEYPRESS=1 xsecurelock
 
 
 for_window [class=".*"] floating disable

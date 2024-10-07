@@ -1,9 +1,10 @@
-sudo apt install tar gzip build-essential lxpolkit nfs-kernel-server autojump xsecurelock ffmpeg feh git pulseaudio pavucontrol gromit-mpx git-lfs playerctl autorandr arandr 
+sudo apt install tar gzip build-essential lxpolkit nfs-kernel-server autojump xsecurelock ffmpeg feh git pulseaudio pavucontrol gromit-mpx git-lfs playerctl autorandr arandr ripgrep
 
-firefox
-nvim
-conda
-docker
+manual installation:
+  firefox
+  nvim
+  conda
+  docker
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 

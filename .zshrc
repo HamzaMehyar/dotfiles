@@ -39,7 +39,7 @@ export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/.elasticsearch/bin:$PATH"
 export PATH="$HOME/projects/diff-so-fancy:$PATH"
 export PATH="$HOME/py_envs/python12/bin:$PATH"
-export PATH="/home/hamza/.local/bin/:$PATH"
+export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$HOME/anaconda3/bin/:$PATH"
@@ -50,7 +50,7 @@ alias vim="nvim"
 
 alias l="/bin/ls -h --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
 
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dot='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias :q="exit"
 alias :x="exit"
@@ -98,20 +98,22 @@ couts() {
 
 source ~/.zjw
 
-export XSECURELOCK_SAVER="/home/hamza/.config/i3/lock_screen_screensaver.sh"
+export XSECURELOCK_SAVER="$HOME/.config/i3/lock_screen_screensaver.sh"
+
+export PATH="$PATH:$HOME/miniconda3/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hamza/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/hamza/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/hamza/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/hamza/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/mehyar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/mehyar/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/mehyar/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/mehyar/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 # <<< conda initialize <<<
 

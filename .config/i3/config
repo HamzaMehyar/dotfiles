@@ -12,6 +12,7 @@ exec --no-startup-id ~/.picom/build/src/picom -CGb --backend glx
 #--Graphics
 exec "autorandr --change work" # this expect you to have autorandr installed  and saved preset to 'work'
 
+exec --no-startup-id gromit-mpx
 #_________________________________POLYBAR___________________________________
 exec_always --no-startup-id ~/.config/polybar/polybar.sh &
 #_________________________________________________________________________

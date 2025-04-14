@@ -13,6 +13,16 @@ exec --no-startup-id ~/.picom/build/src/picom -CGb --backend glx
 exec "autorandr --change work" # this expect you to have autorandr installed  and saved preset to 'work'
 
 exec --no-startup-id gromit-mpx
+
+exec --no-startup-id /usr/libexec/xdg-desktop-portal
+exec --no-startup-id /usr/libexec/xdg-desktop-portal-gtk
+exec --no-startup-id dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus
+
+exec --no-startup-id /usr/bin/greenclip daemon
+bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
+bindsym $mod+c exec --no-startup-id ~/.config/rofi/launchers/type-1/launcher.sh
+
+exec parcellite
 #_________________________________POLYBAR___________________________________
 exec_always --no-startup-id ~/.config/polybar/polybar.sh &
 #_________________________________________________________________________
@@ -40,7 +50,6 @@ for_window [class=".*"] floating disable
 # Windows
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+f focus parent; fullscreen; focus child
-bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop #app search
 
 # Volume Controls
 bindsym XF86AudioMute exec amixer sset 'Master' toggle
@@ -63,6 +72,8 @@ bindsym $mod+p exec playerctl play-pause
 bindsym XF85AudioPause exec playerctl play-pause
 bindsym $mod+equal exec playerctl next
 bindsym $mod+minus exec playerctl previous
+
+bindsym $mod+s exec flameshot gui
 
 
 #Workspaces
@@ -92,7 +103,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+# bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 

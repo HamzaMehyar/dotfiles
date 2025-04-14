@@ -3,6 +3,7 @@
 	name = Hamza Mehyar
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/mehyar/.gitignore_global
 [interactive]
 	# diffFilter = diff-so-fancy --patch
 [color]

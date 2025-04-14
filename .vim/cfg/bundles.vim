@@ -77,6 +77,8 @@ Plug 'Olical/conjure'
 Plug 'snoe/clj-refactor.nvim'
 Plug 'clojure-vim/async-clj-omni'
 Plug 'tpope/vim-fireplace'
+Plug 'snoe/clj-refactor.nvim'
+Plug 'clojure-emacs/refactor-nrepl'
 
 " =====================================================================
 "                          Pairs & Comments

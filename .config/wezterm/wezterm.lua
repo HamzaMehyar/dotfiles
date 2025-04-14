@@ -97,4 +97,10 @@ for i = 1, 9 do
     action = wezterm.action.ActivateTab(i - 1),
   })
 end
+
+config.quick_select_patterns = {
+  -- match things that look like sha1 hashes
+  -- (this is actually one of the default patterns)
+  "[^?\\s]+?\\.[A-Za-z0-9]{1,5}",
+}
 return config

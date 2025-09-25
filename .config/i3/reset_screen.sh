@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 
-SCREEN_NAME="DP-1"
+SCREEN_NAME="DisplayPort-0"
 
 xrandr --output $SCREEN_NAME --off
 

@@ -79,10 +79,28 @@ let g:local_history_path = $HOME."/.vim/.vim-undo-dir"
 let g:local_history_max_changes = 3000
 let g:local_history_new_change_delay = 30
 
+" =====================================================================
+"                          fzf
+" =====================================================================
+if executable('rg')
+    let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*" --glob "!*.jpg" --glob "!*.jpeg" --glob "!*.png" --glob "!*.gif" --glob "!*.bmp" --glob "!*.ico" --glob "!*.pdf" --glob "!*.exe" --glob "!*.dll" --glob "!*.so" --glob "!*.dylib" --glob "!*.zip" --glob "!*.tar" --glob "!*.gz" --glob "!*.rar" --glob "!*.7z"'
+endif
+
+if executable('bat')
+  let g:fzf_files_options = '--preview "bat --style=numbers --color=always --line-range :500 {}"'
+endif
+
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+nnoremap <C-e> :Files<CR>
+" =====================================================================
 filetype on
+
+let g:winresizer_start_key = '<C-T>'
 
 let g:ale_python_pylint_executable = $HOME."/anaconda3/bin/pylint"
 let g:ale_python_flake8_executable = $HOME."/anaconda3/bin/flake8"
 let g:ale_linters = {'python': ['pylint']}
 
 let g:indentLine_setConceal = 0
+
+set viminfo='20,\"50,s10,h,rA:,rB:

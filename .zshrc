@@ -14,8 +14,10 @@ plugins=(
 
 #IGNORE
 export HISTCONTROL=ignoreboth
-export HISTSIZE=999999999
+export HISTSIZE=99999999999
 export SAVEHIST=$HISTSIZE
+unsetopt EXTENDED_HISTORY
+unsetopt INC_APPEND_HISTORY
 #
 
 [[ -f $HOME/.fzf.zsh ]] && source $HOME/.fzf.zsh
@@ -45,10 +47,12 @@ export PATH="$HOME/.local/bin/:$PATH"
 export PATH="$PATH:$HOME/.rbenv/shims"
 export PATH="$PATH:/usr/lib/dart/bin"
 export PATH="$HOME/anaconda3/bin/:$PATH"
+export PATH="$HOME/.redis/src:$PATH"
 
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
 
 alias vim="nvim"
+alias g="grep -i"
 
 alias l="/bin/ls -h --time-style='+%Y-%b-%d-%H' -T 0 -G -g --color=always | cut -c 15-"
 
@@ -106,16 +110,41 @@ export PATH="$PATH:$HOME/miniconda3/bin"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-# __conda_setup="$('/home/mehyar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/mehyar/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/mehyar/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/mehyar/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
+__conda_setup="$('/home/mehyar/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/mehyar/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/mehyar/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/mehyar/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' formats "%F{010}(%b)%f "
+
+precmd() { vcs_info }
+setopt prompt_subst
+PROMPT='${PWD/#$HOME/~} ${vcs_info_msg_0_} %'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+fzf-vim() {
+    local file
+    file=$(find . -type f ! -path '*/\.*' | fzf --preview 'cat {}' --preview-window=right:60%:wrap)
+
+    if [[ -n $file ]]; then
+        nvim "$file"
+    fi
+}
+
+zle -N fzf-vim
+bindkey '^e' fzf-vim

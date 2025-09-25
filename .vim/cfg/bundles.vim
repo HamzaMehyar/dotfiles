@@ -25,7 +25,8 @@ Plug 'simeji/winresizer' " Adds an easy Resize mode
 "                          Files and Search
 " =====================================================================
 
-Plug 'kien/ctrlp.vim'                  " Fuzzy file finder.
+Plug 'junegunn/fzf'             " File structure tree.
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'             " File structure tree.
 Plug 'dbakker/vim-projectroot'         " Sets project root to git init.
 Plug 'dinhhuy258/vim-local-history'    " Local history for files.
@@ -93,8 +94,11 @@ Plug 'tpope/vim-surround'       " Modify surroundings with cs
 " =====================================================================
 
 Plug 'APZelos/blamer.nvim'
+
 Plug 'tpope/vim-fugitive'         " Git wrapper
 
+
+Plug 'https://github.com/wakatime/vim-wakatime'
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif

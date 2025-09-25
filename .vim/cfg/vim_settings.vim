@@ -93,7 +93,7 @@ set list listchars=tab:»·,trail:·                            " Set listchars 
 set splitbelow                                               " Split panes to below
 set splitright                                               " Split panes to right
 set foldmethod=indent                                        " Folding performance
-set foldlevelstart=999                                       " Only auto-fold if file > 999 levels
+set foldlevel=999                                       " Only auto-fold if file > 999 levels
 " set tags=tags                                                " Look for the ctags in the project directory.
 " set statusline=%<%f\ %h%m%r%=\ %-14.(%l,%c%V%)\ %P%#warningmsg#%{SyntasticStatuslineFlag()}%*
 set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
